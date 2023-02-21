@@ -1,5 +1,5 @@
 const mongoose=require('mongoose')
-const mongoURI='mongodb+srv://Sak12:Saxena@cluster0.os363zi.mongodb.net/?retryWrites=true&w=majority'
+const mongoURI=process.env.DATABASE
 mongoose.set('strictQuery', false)
 const connectToMongo=()=>{
     mongoose.connect(mongoURI,()=>{
